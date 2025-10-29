@@ -16,6 +16,14 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
     setIsVideoModalOpen(true);
   };
 
+  const handleModalClose = (open: boolean) => {
+    setIsVideoModalOpen(open);
+    if (!open && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
   useEffect(() => {
     if (isVideoModalOpen && videoRef.current) {
       // Handle promise from play() for better iOS compatibility
@@ -90,19 +98,22 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
       </div>
 
       {/* Video Modal */}
-      <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
-        <DialogContent className="w-[90vw] max-w-3xl p-0 bg-black border-none rounded-2xl overflow-hidden">
-          <video 
-            ref={videoRef}
-            src="/hero-video.mp4"
-            className="w-full h-auto rounded-2xl"
-            controls
-            autoPlay
-            playsInline
-            webkit-playsinline="true"
-            preload="none"
-            controlsList="nodownload"
-          />
+      <Dialog open={isVideoModalOpen} onOpenChange={handleModalClose}>
+        <DialogContent className="w-[95vw] sm:w-[90vw] max-w-4xl max-h-[90vh] p-0 bg-black border-none rounded-lg sm:rounded-2xl overflow-hidden">
+          <div className="relative w-full aspect-video">
+            <video 
+              ref={videoRef}
+              src="/hero-video.mp4"
+              className="w-full h-full object-contain"
+              controls
+              autoPlay
+              playsInline
+              webkit-playsinline="true"
+              preload="metadata"
+              controlsList="nodownload"
+              aria-label="Into the Wild: Reptiles and Amphibians class video"
+            />
+          </div>
         </DialogContent>
       </Dialog>
     </section>
