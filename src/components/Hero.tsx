@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Play } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import videoThumbnail from "@/assets/video-thumbnail.png";
+import videoThumbnail from "@/assets/reptile-class-hero.png";
 
 interface HeroProps {
   onEnrollClick: () => void;
