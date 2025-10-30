@@ -56,7 +56,7 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
             </h1>
             
             <p className="text-base md:text-xl text-muted-foreground leading-relaxed">
-              Weekly herpetology adventures for young explorers. Meet live animals like Scaly the Corn Snake, Slimy the Tiger Salamander, and Lizzie the Leopard Gecko.
+              Learn all about herpetology in live, weekly science classes for kids (ages 8–13), featuring real animals like Scaly the Corn Snake, Slimy the Tiger Salamander, & Lizzie the Leopard Gecko.
             </p>
             
             <div className="space-y-3 md:space-y-4">

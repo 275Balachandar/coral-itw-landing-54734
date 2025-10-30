@@ -1,54 +1,45 @@
-import { Lightbulb, MessageSquare, TrendingUp, Globe } from "lucide-react";
+import { Eye, Globe, Camera } from "lucide-react";
 
 const outcomes = [
   {
-    icon: Lightbulb,
-    title: "Meet Live Animals",
-    description: "Snakes, salamanders & geckos",
-  },
-  {
-    icon: MessageSquare,
-    title: "Share & Discover",
-    description: "Stories and observations",
-  },
-  {
-    icon: TrendingUp,
-    title: "Science Basics",
-    description: "Reptiles vs. amphibians",
+    icon: Eye,
+    description: "Explore the key traits of reptiles and amphibians with help of live animals like toads, snakes, and salamanders",
   },
   {
     icon: Globe,
-    title: "World Explorers",
-    description: "Species from around globe",
+    description: "Learn from a teacher who's explored wildlife across nearly every continent: bringing real stories, field research, & stunning nature photography into each class",
+  },
+  {
+    icon: Camera,
+    description: "Spot reptiles and amphibians in your own environment through fun at-home challenges and creative activities",
   },
 ];
 
 const LearningOutcomes = () => {
   return (
-    <section className="py-12 md:py-16 px-6 bg-gradient-to-b from-background to-coral-secondary/10">
+    <section className="py-8 md:py-12 px-6 bg-gradient-to-b from-background to-coral-secondary/10">
       <div className="container max-w-5xl mx-auto">
-        <div className="text-center mb-8 fade-in-up">
+        <div className="text-center mb-6 fade-in-up">
           <h2 className="text-2xl md:text-3xl font-bold">
-            What Young Explorers Learn
+            What Kids Learn
           </h2>
         </div>
         
-        <div className="grid grid-cols-2 gap-4 md:gap-6 fade-in">
+        <div className="grid grid-cols-1 gap-4 fade-in max-w-3xl mx-auto">
           {outcomes.map((outcome, index) => {
             const Icon = outcome.icon;
             return (
               <div 
                 key={index}
-                className="bg-card p-4 md:p-6 rounded-xl shadow-md hover:shadow-coral transition-all duration-300 hover:scale-105 border border-border"
+                className="bg-card p-4 rounded-xl shadow-md hover:shadow-coral transition-all duration-300 border border-border"
               >
-                <div className="flex flex-col items-center text-center gap-3">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mt-1">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-base md:text-lg font-semibold mb-1">{outcome.title}</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">{outcome.description}</p>
-                  </div>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed flex-1">
+                    {outcome.description}
+                  </p>
                 </div>
               </div>
             );
