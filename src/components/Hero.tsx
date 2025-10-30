@@ -44,8 +44,8 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
       <div className="container max-w-6xl mx-auto relative z-10">
         {/* Live online classes badge */}
         <div className="flex justify-center mb-6 md:mb-8 fade-in">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-            <span className="text-sm md:text-base font-semibold text-primary">Live online classes</span>
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-sm md:text-base font-semibold text-primary text-center">Weekly Live Online Classes for Ages 8-13</span>
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
