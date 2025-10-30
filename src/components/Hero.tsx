@@ -42,6 +42,12 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
       <div className="absolute inset-0 bg-gradient-to-br from-coral-secondary/20 via-background to-coral-accent-light/10" />
       
       <div className="container max-w-6xl mx-auto relative z-10">
+        {/* Live online classes badge */}
+        <div className="flex justify-center mb-6 md:mb-8 fade-in">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-sm md:text-base font-semibold text-primary">Live online classes</span>
+          </div>
+        </div>
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Left content */}
           <div className="text-center md:text-left space-y-4 md:space-y-6 fade-in-up">
@@ -62,8 +68,8 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
                 Enroll For FREE
               </Button>
               
-              <p className="text-xs md:text-sm text-muted-foreground">
-                Class meets every <span className="font-semibold text-foreground">Thursday</span> · 5 PM – 6 PM (PST)
+              <p className="text-sm md:text-base text-muted-foreground">
+                Class meets every <span className="font-semibold text-foreground">Thursday</span> · 5 PM – 5:50 PM (PST)
               </p>
             </div>
           </div>
