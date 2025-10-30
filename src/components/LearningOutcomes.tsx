@@ -85,17 +85,18 @@ const LearningOutcomes = () => {
 
             {/* Expandable Schedule Content */}
             {isScheduleExpanded && (
-              <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2 space-y-4 border-t border-border">
+              <div className="px-6 md:px-8 pb-6 md:pb-8 pt-4 space-y-6 border-t border-border">
                 {weeks.map((week, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <span className="text-sm font-bold text-primary">{index + 1}</span>
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-20 text-right">
+                      <span className="text-base md:text-lg font-semibold text-primary">{week.week}</span>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-base text-foreground">
-                        {week.week} - {week.title}
+                    <div className="flex-shrink-0 w-px h-auto min-h-[60px] bg-primary/30" />
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-base md:text-lg text-foreground mb-1">
+                        {week.title}
                       </h4>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <p className="text-sm md:text-base text-muted-foreground">
                         {week.description}
                       </p>
                     </div>
