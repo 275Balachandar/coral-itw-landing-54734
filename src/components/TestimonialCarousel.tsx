@@ -23,6 +23,41 @@ const testimonials = [
     location: "Texas",
     rating: 5,
   },
+  {
+    id: 4,
+    quote: "My kids learned so much about different reptile species. The teacher is incredibly knowledgeable!",
+    author: "Emily T.",
+    location: "Florida",
+    rating: 5,
+  },
+  {
+    id: 5,
+    quote: "Perfect class for curious kids. My daughter now wants to be a herpetologist!",
+    author: "Jason L.",
+    location: "Arizona",
+    rating: 5,
+  },
+  {
+    id: 6,
+    quote: "Interactive, fun, and educational. Lizzie the lizard is a star!",
+    author: "Rachel P.",
+    location: "Oregon",
+    rating: 4.5,
+  },
+  {
+    id: 7,
+    quote: "The best online science class we've tried. My son is finally excited about learning!",
+    author: "Mark D.",
+    location: "New York",
+    rating: 5,
+  },
+  {
+    id: 8,
+    quote: "Amazing how engaged my shy daughter became. She asks questions every class now!",
+    author: "Lisa W.",
+    location: "Washington",
+    rating: 5,
+  },
 ];
 
 const TestimonialCarousel = () => {
