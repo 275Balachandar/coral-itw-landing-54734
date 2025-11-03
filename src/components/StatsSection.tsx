@@ -18,11 +18,16 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-4 px-4">
-      <div className="container max-w-4xl mx-auto">
-        <div className="grid grid-cols-3 gap-0 divide-x divide-border">
-          {stats.map((stat) => (
-            <div key={stat.id} className="flex flex-col items-center justify-center text-center px-6 md:px-12">
+    <section className="py-8 md:py-10 px-4">
+      <div className="container max-w-5xl mx-auto">
+        <div className="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12">
+          {stats.map((stat, index) => (
+            <div 
+              key={stat.id} 
+              className={`flex flex-col items-center justify-center text-center px-4 md:px-6 ${
+                index < stats.length - 1 ? 'border-r border-border' : ''
+              }`}
+            >
               <p className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-1 whitespace-nowrap">
                 {stat.value}
               </p>
