@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import StatsSection from "@/components/StatsSection";
 import LearningOutcomes from "@/components/LearningOutcomes";
 import ParentTestimonial from "@/components/ParentTestimonial";
 import CTABanner from "@/components/CTABanner";
@@ -17,6 +19,8 @@ const Index = () => {
     <main className="min-h-screen">
       <Header />
       <Hero onEnrollClick={handleEnrollClick} />
+      <TestimonialCarousel />
+      <StatsSection />
       <LearningOutcomes />
       <ParentTestimonial />
       <CTABanner onEnrollClick={handleEnrollClick} />
