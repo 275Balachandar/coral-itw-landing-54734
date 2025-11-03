@@ -28,10 +28,10 @@ const StatsSection = () => {
                 index < stats.length - 1 ? 'border-r border-border/50' : ''
               }`}
             >
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-2 whitespace-nowrap">
+              <p className="text-lg md:text-xl lg:text-2xl font-bold text-primary mb-2 whitespace-nowrap">
                 {stat.value}
               </p>
-              <p className="text-sm md:text-base text-muted-foreground whitespace-nowrap">
+              <p className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">
                 {stat.label}
               </p>
             </div>
