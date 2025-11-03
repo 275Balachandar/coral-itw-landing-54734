@@ -26,7 +26,7 @@ const testimonials = [
 
 const TestimonialCarousel = () => {
   return (
-    <section className="py-8 px-4 overflow-hidden">
+    <section className="py-4 px-4 overflow-hidden">
       <div className="container max-w-6xl mx-auto">
         <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
           {testimonials.map((testimonial) => (
