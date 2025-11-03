@@ -18,26 +18,23 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-8 md:py-10 px-4">
-      <div className="container max-w-5xl mx-auto">
-        <div className="flex items-center justify-center gap-6 md:gap-10 lg:gap-[58px]">
+    <section className="py-12 md:py-16 px-4">
+      <div className="container max-w-6xl mx-auto">
+        <div className="grid grid-cols-3 gap-8 md:gap-12 lg:gap-16">
           {stats.map((stat, index) => (
-            <>
-              <div 
-                key={stat.id} 
-                className="flex flex-col items-center justify-center text-center px-4 md:px-6"
-              >
-                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-1 whitespace-nowrap">
-                  {stat.value}
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">
-                  {stat.label}
-                </p>
-              </div>
-              {index < stats.length - 1 && (
-                <div className="h-12 md:h-16 w-px bg-border" />
-              )}
-            </>
+            <div 
+              key={stat.id} 
+              className={`flex flex-col items-center justify-center text-center py-4 md:py-6 px-4 md:px-8 ${
+                index < stats.length - 1 ? 'border-r border-border/50' : ''
+              }`}
+            >
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-2 whitespace-nowrap">
+                {stat.value}
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground whitespace-nowrap">
+                {stat.label}
+              </p>
+            </div>
           ))}
         </div>
       </div>
