@@ -69,7 +69,7 @@ const TestimonialCarousel = () => {
 
     let scrollInterval: NodeJS.Timeout;
     let currentIndex = 0;
-    const cardWidth = 304; // 280px width + 24px gap
+    const cardWidth = 276; // 260px width + 16px gap
 
     const autoScroll = () => {
       currentIndex = (currentIndex + 1) % testimonials.length;
@@ -85,20 +85,20 @@ const TestimonialCarousel = () => {
   }, []);
 
   return (
-    <section className="py-4 px-4 overflow-hidden">
+    <section className="py-2 px-4 overflow-hidden">
       <div className="container max-w-6xl mx-auto">
         <div 
           ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide"
         >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex-shrink-0 w-[280px] md:w-[320px] snap-center"
+              className="flex-shrink-0 w-[260px] md:w-[300px] snap-center"
             >
-              <div className="bg-card border border-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow h-full">
+              <div className="bg-card border border-border rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow h-full">
                 {/* Stars */}
-                <div className="flex gap-0.5 mb-3">
+                <div className="flex gap-0.5 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
@@ -114,7 +114,7 @@ const TestimonialCarousel = () => {
                 </div>
 
                 {/* Quote */}
-                <p className="text-foreground text-base mb-4 leading-relaxed">
+                <p className="text-foreground text-sm mb-3 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
