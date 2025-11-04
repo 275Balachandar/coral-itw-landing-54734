@@ -85,7 +85,7 @@ const TestimonialCarousel = () => {
   }, []);
 
   return (
-    <section className="py-2 px-4 overflow-hidden">
+    <section className="py-1 px-4 overflow-hidden">
       <div className="container max-w-6xl mx-auto">
         <div 
           ref={scrollContainerRef}
