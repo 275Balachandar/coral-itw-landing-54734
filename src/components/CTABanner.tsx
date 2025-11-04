@@ -17,7 +17,7 @@ const CTABanner = ({ onEnrollClick }: CTABannerProps) => {
           onClick={onEnrollClick}
           className="bg-background text-primary hover:bg-background/90 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
         >
-          Enroll For FREE
+          TRY FOR FREE
         </Button>
       </div>
     </section>

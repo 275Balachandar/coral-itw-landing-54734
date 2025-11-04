@@ -53,7 +53,7 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
             onClick={onEnrollClick}
             className="w-full md:w-auto px-10 py-5 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-coral-lg hover:shadow-coral transition-all duration-300 hover:scale-105 rounded-xl"
           >
-            Enroll For FREE
+            TRY FOR FREE
           </Button>
         </div>
 
