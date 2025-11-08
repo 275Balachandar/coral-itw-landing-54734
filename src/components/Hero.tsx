@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-
+import { trackButtonClick } from "@/lib/mixpanel";
 interface HeroProps {
   onEnrollClick: () => void;
 }
@@ -56,7 +56,13 @@ const Hero = ({ onEnrollClick }: HeroProps) => {
         <div className="flex justify-center mb-4 fade-in-up">
           <Button 
             size="lg" 
-            onClick={onEnrollClick}
+            onClick={() => {
+                trackButtonClick("Try for Free - Hero", {
+                  location: "hero_section",
+                  button_type: "primary_cta",
+                });
+                onEnrollClick();
+              }}
             className="w-full md:w-auto px-10 py-5 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-coral-lg hover:shadow-coral transition-all duration-300 hover:scale-105 rounded-xl"
           >
             TRY FOR FREE
